@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    padding: 30px;
+  }
+
+  path.slice {
+    stroke-width: 2px;
+  }
+
+  polyline {
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+  }
+
+  .wrapper {
+    float: right;
+    font-size: 0;
+    width: 50%;
+  }
+
+  .values {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding-right: 10%;
+    vertical-align: middle;
+    width: 40%;
+  }
+
+  .value {
+    border-right: 10px solid;
+    float: right;
+    clear: right;
+    margin-bottom: 5px;
+    white-space: nowrap;
+  }
+
+  .value--state {
+    border-color: #337018;
+  }
+  .value--private {
+    border-color: #38AD26;
+  }
+  .value--shortfall {
+    border-color: #ff0000;
+  }
+
+  .value--total {
+    border-color: transparent;
+  }
+
+  .slice-state {
+    fill: #337018;
+  }
+  .slice-private {
+    fill: #38AD26;
+  }
+  .slice-shortfall {
+    fill: #ff0000;
+  }
+  .container {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  label {
+    margin-right: 20px;
+  }
+  input {
+    -webkit-appearance: none;
+    border: 0 none;
+    background: transparent none;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: right;
+    width: 3.8em;
+  }
+
+
+</style>
+<body>
+<div class="wrapper">
+  <div class="values">
+    <div class="value value--state"><label>State:</label> £<input class="state" type="number" value="20000"></div>
+    <div class="value value--private"><label>Private:</label> £<input class="private" type="number" value="50000"></div>
+    <div class="value value--shortfall"><label>Shortfall:</label> £<input class="shortfall" type="number" value="5000"></div>
+    <div class="value value--total"><label>Total:</label> £<input class="total" type="number" value="75000"></div>
+  </div>
+  <div class="container">
+    <div class="inner">
+    </div>
+  </div>
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="assets/javascripts/vendor/d3.min.js"></script>
+<script src="assets/javascripts/init.js"></script>
+
+</body>
